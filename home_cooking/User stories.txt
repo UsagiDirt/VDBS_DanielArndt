@@ -1,0 +1,19 @@
+User stories
+
+1. As a home cook, I want to save recipes and their
+   instructions so that I can make them again.
+
+2. As a home cook, I want to view the ingredients,
+   quantities, and measurement units for a recipe
+   so that I know what I need to prepare it.
+
+3. As a home cook, I want to find recipes that use
+   a particular ingredient so that I can use food
+   I already have.
+
+4. As a home cook, I want to browse recipes by category
+   so that I can find the type of meal I want to make.
+
+5. As a home cook, I want to record ratings and notes
+   each time I cook a recipe so that I can remember
+   what worked and what I would change.

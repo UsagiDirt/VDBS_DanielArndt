@@ -1,0 +1,30 @@
+# Windows
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# Visual Studio / SSMS
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+.vs/
+
+# SQL Server files
+*.mdf
+*.ldf
+*.ndf
+*.bak
+
+# JetBrains
+.idea/
+
+# VS Code
+.vscode/
+
+# OneDrive temp
+~$*
+
+# Node / other
+node_modules/
+.env

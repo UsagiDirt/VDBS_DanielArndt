@@ -1,0 +1,22 @@
+Home_cook_entity
+   Category(CategoryID, CategoryName)
+
+   Primary Key: CategoryID
+
+   Recipe(RecipeID, CategoryID, RecipeName, Instructions,
+          Servings, PrepMinutes, CookMinutes)
+
+   Primary Key: RecipeID
+   Foreign Key: CategoryID references Category.CategoryID
+
+
+   Ingredient(IngredientID, IngredientName)
+
+
+   RecipeIngredient(RecipeIngredientID, RecipeID,
+                    IngredientID, Quantity,
+                    MeasurementUnit, PreparationNote)
+
+
+   CookingLog(CookingLogID, RecipeID, CookedDate,
+              Rating, Notes)
