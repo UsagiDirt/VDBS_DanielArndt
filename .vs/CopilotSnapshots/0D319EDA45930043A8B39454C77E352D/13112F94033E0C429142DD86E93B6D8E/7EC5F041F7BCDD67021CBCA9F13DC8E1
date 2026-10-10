@@ -1,4 +1,4 @@
-Home-cookinng
+﻿Home-cookinng
 ===============
 
 Repository for SQL Server schema and example queries for a simple home-cooking app.
@@ -22,8 +22,8 @@ Quick local setup (PowerShell)
    gh repo create Home-cookinng --public --source . --remote origin --push
 
 2b. Or create remote manually on GitHub and push:
-   git remote add origin https://github.com/UsagiDirt/Home-cookinng.git
+   git remote add origin https://github.com/OWNER/Home-cookinng.git
    git branch -M main
    git push -u origin main
 
-This README uses `UsagiDirt` as the repository owner in the example remote URL.
+Replace OWNER with your GitHub username.
