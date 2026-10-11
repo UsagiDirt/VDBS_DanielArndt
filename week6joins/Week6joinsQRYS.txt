@@ -1,0 +1,54 @@
+1.
+USE [PropertyManager];
+GO
+
+SELECT
+    a.*,
+    b.*
+FROM dbo.Apartment AS a
+INNER JOIN dbo.[Building_ID] AS b
+    ON a.Building_ID = b.Building_ID
+ORDER BY b.Building_name;
+
+2.
+USE [PropertyManager];
+GO
+
+SELECT *
+FROM dbo.Apartment
+ORDER BY Apt_number;
+
+3.
+SELECT p.Persons_ID,
+       p.First_Name,
+       p.Last_Name,
+       a.street_1,
+       a.City,
+       a.State,
+       a.Zip
+FROM dbo.person AS p
+LEFT JOIN dbo.Address AS a
+    ON p.Address_ID = a.Address_ID
+WHERE a.City = 'Winona';
+
+4.
+SELECT a.City,
+       COUNT(p.Persons_ID) AS Number_of_People
+FROM dbo.Address AS a
+INNER JOIN dbo.person AS p
+    ON a.Address_ID = p.Address_ID
+GROUP BY a.City
+ORDER BY Number_of_People DESC;
+
+5.
+SELECT p.Persons_ID,
+       CONCAT(p.First_Name, ' ',
+              ISNULL(p.Middle_initial + '. ', ''),
+              p.Last_Name) AS Full_Name,
+       CONCAT(a.street_1,
+              ISNULL(' ' + a.Street_2, ''), ', ',
+              a.City, ', ', a.State, ' ', a.Zip) AS Full_Address
+FROM dbo.person AS p
+INNER JOIN dbo.Address AS a
+    ON p.Address_ID = a.Address_ID
+ORDER BY p.Last_Name, p.First_Name;
